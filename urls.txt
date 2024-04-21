@@ -1,0 +1,7 @@
+http://106.15.89.0:7001/translate
+http://153.36.242.81:10030/translate
+https://deeplx.iloli.love/translate
+http://deeplx.iloli.love/translate
+http://dx.ift.lat/translate
+https://dx.ift.lat/translate
+http://38.207.175.96:8082/translate
