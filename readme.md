@@ -3,3 +3,5 @@ deeplx-api
 使用方法：
 1.将urls.txt与deeplx-api.exe，放在同一目录下，按urls.txt内链接的格式http(s)://域名(ip)/translate），每行一条，自行添加。
 2.运行deeplx-api.exe，弹出命令框内显示可用url数量。
+
+提示：exe可执行文件可能会被杀毒软件（windows defender）误杀，请将exe文件添加到白名单。
