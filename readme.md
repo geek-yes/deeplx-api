@@ -4,7 +4,7 @@
 
 ## 使用方法：
 
-### 一、直接下载二进制文件 deeplx-api.exe
+### 一、前往[releases](https://github.com/geek-yes/deeplx-api/releases)下载二进制文件 deeplx-api.exe
 
 1. 将 `urls.txt` 与 `deeplx-api.exe`，放在同一目录下，按 `urls.txt` 内链接的格式 `http(s)://域名(ip)/translate`，每行一条，自行添加。
 2. 运行 `deeplx-api.exe`，弹出命令框内显示可用 URL 数量。
@@ -28,4 +28,4 @@ docker run
 
 设置沉浸式翻译服务为 DeepLX (Beta)，API 地址为 http://127.0.0.1:5000/translate 或 http://VPS_ip:5000/translate
 
-###三、urls.txt 内容不定时更新，请关注 GitHub 仓库。
+### 三、urls.txt 内容不定时更新，请关注 GitHub 仓库。
