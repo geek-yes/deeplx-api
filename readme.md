@@ -1,21 +1,31 @@
-# deeplx-api
+# DeepLX API
 
-本工具作为沉浸式翻译的接口工具，采用多 API 多线程，自动判断 API 有效性，获取低延迟有效的接口，大大提高沉浸式翻译的速度和效率。可以部署在本地（PC 端\本地 Docker），也可以运行在 VPS 上。
+[English](README.md) | [中文](README_ZH.md)
 
-## 使用方法：
+This tool serves as an interface for immersive translation, employing multiple APIs and threads. It automatically checks API validity to obtain low-latency and effective interfaces, significantly enhancing the speed and efficiency of immersive translation. It can be deployed locally (on a PC or local Docker) or run on a VPS.
 
-### 一、前往[releases](https://github.com/geek-yes/deeplx-api/releases)下载二进制文件 deeplx-api.exe
+## Features
 
-1. 将 `urls.txt` 与 `deeplx-api.exe`，放在同一目录下，按 `urls.txt` 内链接的格式 `http(s)://域名(ip)/translate`，每行一条，自行添加。
-2. 运行 `deeplx-api.exe`，弹出命令框内显示可用 URL 数量。
-3. 设置沉浸式翻译服务为 DeepLX (Beta)，API 地址为 `http://127.0.0.1:5000/translate`
+- **Multi-API Support:** Leverages multiple translation APIs to ensure availability and redundancy.
+- **Automatic API Validation:** Dynamically tests API endpoints to find the fastest and most reliable options.
+- **Low Latency:** Optimizes for speed to provide near real-time translation.
+- **Flexible Deployment:** Can be deployed on various platforms, including local PCs, Docker, and VPS.
 
-提示：`exe` 可执行文件可能会被杀毒软件（Windows Defender）误杀，请将 `exe` 文件添加到白名单。
+## Getting Started
 
-### 二、Docker 部署
+### 1. Download the Binary (Executable)
+
+1. Go to the [releases](https://github.com/geek-yes/deeplx-api/releases) page and download the `deeplx-api.exe` binary file.
+2. Place `urls.txt` and `deeplx-api.exe` in the same directory. Populate `urls.txt` with translation API URLs, one per line, in the format `http(s)://domain(ip)/translate`.
+3. Run `deeplx-api.exe`. The command prompt will display the number of available URLs.
+4. Configure your immersive translation service to use DeepLX (Beta) with the API address: `http://127.0.0.1:5000/translate`.
+
+**Note:** The executable might be flagged by antivirus software (like Windows Defender). Please add the executable file to your antivirus's whitelist.
+
+### 2. Docker Deployment
 
 ```bash
-docker run
+docker run \
   --name deeplx-api \
   -p 5000:5000 \
   -v /path/to/your/urls.txt:/app/urls.txt \
@@ -23,9 +33,17 @@ docker run
   --restart always \
   geekyes/deeplx-api
 ```
+You can customize the port mapping as needed.
 
-映射端口可以自定义，urls.txt 和 logs 目录选择本机目录。
+Replace /path/to/your/urls.txt and /path/to/your/logs with your local directory paths.
 
-设置沉浸式翻译服务为 DeepLX (Beta)，API 地址为 http://127.0.0.1:5000/translate 或 http://VPS_ip:5000/translate
+Configure your immersive translation service to use DeepLX (Beta) with API address: http://127.0.0.1:5000/translate or http://VPS_ip:5000/translate.
 
-### 三、urls.txt 内容不定时更新，请关注 GitHub 仓库。
+### 3. urls.txt Updates
+The content of urls.txt will be updated periodically. Please keep an eye on this GitHub repository for the latest version.
+
+Contributing
+Contributions are welcome! Feel free to submit issues or pull requests.
+
+License
+This project is licensed under the [MIT License](LICENSE.md).
